@@ -1,5 +1,6 @@
 provider "tfe" {
-  token = var.token
+  token        = var.token
+  organization = "flaviuscdinu93"
 }
 
 resource "tfe_team" "this" {
