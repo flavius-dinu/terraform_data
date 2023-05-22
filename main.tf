@@ -8,3 +8,8 @@ resource "tfe_team" "this" {
   name         = format("team%d", count.index)
   organization = "my-org-name"
 }
+
+
+variable "token" {
+  type = string
+}
