@@ -9,6 +9,13 @@ resource "tfe_team" "this" {
 }
 
 
+resource "terraform_data" "this" {
+  count = 600
+  provisioner "local-exec" {
+    command = format("echo %d", count.index)
+  }
+}
+
 variable "token" {
   type = string
 }
