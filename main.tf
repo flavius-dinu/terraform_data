@@ -1,12 +1,10 @@
 provider "tfe" {
-  token   = var.token
-  version = "~> 0.44.0"
+  token = var.token
 }
 
 resource "tfe_team" "this" {
-  count        = 600
-  name         = format("team%d", count.index)
-  organization = "my-org-name"
+  count = 600
+  name  = format("team%d", count.index)
 }
 
 
